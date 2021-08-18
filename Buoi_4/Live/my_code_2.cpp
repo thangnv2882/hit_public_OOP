@@ -34,8 +34,8 @@ public:
 };
 
 void NhanVien::Nhap() {
-	cout << "Nhap ten nhan vien:" << fflush(stdin); gets(hoTen);
-	cout << "Nhap chuc vu nhan vien:" << fflush(stdin); gets(chucVu);
+	cout << "Nhap ten nhan vien: "; fflush(stdin); gets(hoTen);
+	cout << "Nhap chuc vu nhan vien: "; fflush(stdin); gets(chucVu);
 }
 void NhanVien::Xuat() {
 	cout << left << setw(20) << hoTen << setw(20) << chucVu << endl;
