@@ -24,23 +24,29 @@ void DATE::Xuat() {
 
 class NHANSU {
 private:
-	static int maNS;
+	int id;
 	char hoTen[30];
 	DATE NS;
 public:
+	NHANSU();
+	static int maNS;
 	void Nhap();
 	void Xuat();
 };
 
-int NHANSU::maNS = 0;
+int NHANSU::maNS = 1;
 
+NHANSU::NHANSU() {
+	this->id = NHANSU::maNS;
+	NHANSU::maNS++;
+}
 void NHANSU::Nhap() {
 	cout << "Nhap ho ten: "; fflush(stdin); gets(hoTen);
 	NS.Nhap();
 }
 void NHANSU::Xuat() {
-	maNS++;
-	cout << left << setw(12) << this->maNS << setw(20) << this->hoTen;
+//	maNS++;
+	cout << left << setw(12) << this->id << setw(20) << this->hoTen;
 	NS.Xuat();
 	cout << endl;
 }
